@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Teste Esig</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="resources/font-awesome-new/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="resources/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="resources/css/style.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="logo" id="menu-options">
+        <a href="#"><span class="fa fa-bars fa-lg"></span></a>
+      </aside>
+      <header class="header container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <span class="ml-2 mt-2 far fa-image icon-custom-header"></span>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <div class="d-flex flex-column account mt-1">
+              <span>ADRYEL JULIAO</span>
+              <a href="#" class="justify-content-end d-flex"
+                ><span>Settings</span></a
+              >
+            </div>
+            <div class="container-icon-account mr-2 mt-1">
+              <a href="#">
+                <span class="fas fa-user icon-custom-header"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="menu-area">
+        <ul>
+          <li>
+            <a href="#"><span class="fa fa-search fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-home fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fas fa-file-image fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fas fa-chart-line fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-inbox fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="far fa-file-image fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="far fa-calendar fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-users fa-lg"></span></a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-cog fa-lg"></span></a>
+          </li>
+        </ul>
+      </aside>
+      <main class="content container-fluid">
+        <!-- INFO CARDS -->
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-1">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title">TOTAL SALES</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      21.824
+                    </h6>
+                  </div>
+                  <div class="col-md-4" id="icon-card-info">
+                    <span class="fas fa-store fa-lg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-1">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title">TOTAL INCOME</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      $ 921.824
+                    </h6>
+                  </div>
+                  <div class="col-md-4" id="icon-card-info">
+                    <span class="fas fa-tag fa-lg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4 mt-1">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5 class="card-title">TOTAL INCOME</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                      66.584
+                    </h6>
+                  </div>
+                  <div class="col-md-4" id="icon-card-info">
+                    <span class="fas fa-desktop fa-lg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHARTS CARDS -->
+        <div class="row mt-4">
+          <div class="col-sm-12 col-md-12 col-lg-8 mt-1">
+            <div class="card" style="height: 100%;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-9 col-md-10 col-lg-10" id="title">
+                    <h5
+                      class="card-title"
+                      style="padding: 10px; font-weight: bold; border-bottom: 2px solid #ccc;"
+                    >
+                      TOTAL INCOME
+                    </h5>
+                  </div>
+                  <div class="col-sm-3 col-md-2 col-lg-2" id="icon-card">
+                    <a href="#"><span class="fas fa-cog fa-lg"></span></a>
+                  </div>
+                </div>
+                <div class="mt-4" id="areachart"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 mt-1">
+            <div class="card" style="height: 100%;">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-10" id="title">
+                    <h5
+                      class="card-title"
+                      style="padding: 10px; font-weight: bold; border-bottom: 2px solid #ccc;"
+                    >
+                      TOP CATEGORIES
+                    </h5>
+                  </div>
+                </div>
+                <div class="chart-cointainer mt-4">
+                  <canvas id="doughnut-chart" height="100" width="100"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--TABLE CARD-->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-10" id="title">
+                    <h5
+                      class="card-title"
+                      style="padding: 10px; font-weight: bold; border-bottom: 2px solid #ccc;"
+                    >
+                      TOTAL INCOME
+                    </h5>
+                  </div>
+                  <div class="col-md-2" id="icon-card">
+                    <a href="#"><span class="fas fa-cog fa-lg"></span></a>
+                  </div>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 table-responsive-md">
+                    <table
+                      class="table table-striped"
+                      style="border: 1px solid #dee2e6;"
+                    >
+                      <tbody>
+                        <tr>
+                          <td class="align-middle">
+                            <h5 style="margin: 0;">
+                              <strong>Jerry Mattedi</strong>
+                            </h5>
+                          </td>
+                          <td>
+                            13 aug 2013 <br />
+                            Joined
+                          </td>
+                          <td>
+                            251-651-5362<br />
+                            Phone Number
+                          </td>
+                          <td>
+                            New York <br />
+                            Location
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary">Options</a>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-success">Details</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">
+                            <h5 style="margin: 0;">
+                              <strong>Jerry Mattedi</strong>
+                            </h5>
+                          </td>
+                          <td>
+                            13 aug 2013 <br />
+                            Joined
+                          </td>
+                          <td>
+                            251-651-5362<br />
+                            Phone Number
+                          </td>
+                          <td>
+                            New York <br />
+                            Location
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary">Options</a>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-success">Details</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">
+                            <h5 style="margin: 0;">
+                              <strong>Jerry Mattedi</strong>
+                            </h5>
+                          </td>
+                          <td>
+                            13 aug 2013 <br />
+                            Joined
+                          </td>
+                          <td>
+                            251-651-5362<br />
+                            Phone Number
+                          </td>
+                          <td>
+                            New York <br />
+                            Location
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary">Options</a>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-success">Details</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">
+                            <h5 style="margin: 0;">
+                              <strong>Jerry Mattedi</strong>
+                            </h5>
+                          </td>
+                          <td>
+                            13 aug 2013 <br />
+                            Joined
+                          </td>
+                          <td>
+                            251-651-5362<br />
+                            Phone Number
+                          </td>
+                          <td>
+                            New York <br />
+                            Location
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary">Options</a>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-success">Details</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="align-middle">
+                            <h5 style="margin: 0;">
+                              <strong>Jerry Mattedi</strong>
+                            </h5>
+                          </td>
+                          <td>
+                            13 aug 2013 <br />
+                            Joined
+                          </td>
+                          <td>
+                            251-651-5362<br />
+                            Phone Number
+                          </td>
+                          <td>
+                            New York <br />
+                            Location
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary">Options</a>
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-success">Details</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer container-fluid">
+        <div class="row" style="height: 100%;">
+          <div class="col-12">
+            <div class="mycopyright">
+              <span
+                ><i class="far fa-copyright fa-lg"></i>2019 Copyright:
+                <strong>Adryel Julião</strong></span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="resources/jquery/jquery.min.js"></script>
+    <script src="resources/popper/popper.min.js"></script>
+    <script src="resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resources/myjs/charts.js"></script>
+  </body>
+</html>
